@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Comment } from "../";
-const CommentList = () => {
-  return (
-    <ComList>
-      <Comment />
-      <Comment />
-      <Comment />
-    </ComList>
-  );
+const CommentList = ({ comments }) => {
+  const commentList = comments.map((comments, i) => {
+    return (
+      <Comment name={comments.email.split("@")} body={comments.body} key={i} />
+    );
+  });
+  return <ComList>{commentList}</ComList>;
 };
 
 const ComList = styled.ul`

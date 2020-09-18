@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-const Comment = () => {
+const Comment = ({ name, body }) => {
   return (
     <CommentLi>
       <Body>
-        <Name>name</Name>body
+        <Name>{name}</Name>
+        {body}
       </Body>
     </CommentLi>
   );

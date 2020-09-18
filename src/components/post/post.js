@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { CommentList } from "../";
-const Post = () => (
+const Post = ({ title, body, comments }) => (
   <PostDiv>
-    <Title>Title</Title>
-    <Ptxt>Body</Ptxt>
-    <CommentList />
+    <Title>{title}</Title>
+    <Ptxt>{body}</Ptxt>
+    <CommentList comments={comments} />
   </PostDiv>
 );
 

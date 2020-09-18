@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const Navigate = () => {
+const Navigate = ({ onClick, postId, disabeld }) => {
   return (
     <NavDiv>
-      <ArrowBtn content="Previous">
+      <ArrowBtn
+        content="Previous"
+        onClick={() => onClick("PREV")}
+        disabeld={disabeld}
+      >
         <i class="fas fa-arrow-left"></i>
       </ArrowBtn>
-      <NavNum>1</NavNum>
-      <ArrowBtn content="Next">
+      <NavNum>{postId}</NavNum>
+      <ArrowBtn
+        content="Next"
+        onClick={() => onClick("NEXT")}
+        disabeld={disabeld}
+      >
         <i class="fas fa-arrow-right"></i>
       </ArrowBtn>
     </NavDiv>
